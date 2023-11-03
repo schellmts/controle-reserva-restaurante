@@ -1,0 +1,18 @@
+{
+  "name": "controle-reserva-restaurante",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "schellmts",
+  "license": "ISC",
+  "dependencies": {
+    "xyz": "^4.0.0"
+  },
+  "devDependencies": {
+    "abc": "^0.6.1"
+  }
+}
