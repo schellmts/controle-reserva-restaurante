@@ -29,6 +29,10 @@
     margin-right: 2px;
 }
 
+.nav-item i {
+    margin-right: 8px;
+}
+
 .hero-header {
     background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(../img/interna_restaurante-1-1400x700.jpg);
     width: 100vw;
