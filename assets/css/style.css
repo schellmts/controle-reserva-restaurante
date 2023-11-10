@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --cor-prinipal: #ff7f11;
+    --cor-secundaria: #934b00; 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +23,7 @@
 }
 
 .navbar_logo span {
-    color: #ff7f11;
+    color: var(--cor-prinipal);
     font-family: 'Inknut Antiqua', serif;
 }
 
@@ -53,59 +58,50 @@
     background: #934b00;
 }
 
-.about-section {
-    height: 60vh;
+.about-section h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
-.col {
-    margin-top: 3.5rem;
-}
-
-.col h2 {
+.header-about h2 {
+    font-size: 3rem;
+    font-weight: 600;
     color: #ff7f11;
-    margin-bottom: 2rem;
-    font-size: 45px;
 }
 
-.col p {
-    color: #934b00;
+.about-section .img-head {
+    position: relative;
+}
+
+.about-section .img-head img {
+    width: 100%;
+    border: 10px groove var(--cor-prinipal);
+}
+
+.about-section .img-head::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, var(--cor-prinipal), rgb(0, 0, 0));
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .5;
+}
+
+.about-section .text-head {
+    font-size: 28px;
+    color: var(--cor-prinipal);
+}
+
+.about-section .break-small {
+    width: 80px;
+    height: 3px;
+    background-color: var(--cor-secundaria);
+}
+
+.descricao {
+    color: var(--cor-secundaria);
+    font-weight: 500;
     font-size: 18px;
-}
-
-.col img {
-    width: 70%;
-    border: 4px solid #934b00;
-}
-
-
-@media screen and (max-width: 1200px) {
-    .col img {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .about-section {
-        height: 110vh;
-    }
-    
-    .gx-5 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .col img {
-        width: 70%;
-    }
-    
-    .col p {
-        font-size: 18px;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    .col img {
-        width: 90%;
-    }
 }
