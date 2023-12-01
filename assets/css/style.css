@@ -116,7 +116,7 @@
 }
 
 .contato {
-    color: var(--cor-secundaria);
+    color: var(--cor-prinipal);
 }
 
 .contato .header-contato span {
@@ -152,3 +152,4 @@
     font-size: 32px;
     margin-right: 8px;
 }
+
