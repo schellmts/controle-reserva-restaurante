@@ -153,3 +153,11 @@
     margin-right: 8px;
 }
 
+.header-reserva {
+    color: #ff7f11;
+}
+
+.header-reserva h1 {
+    font-size: 57px;
+    text-align: start;
+}
