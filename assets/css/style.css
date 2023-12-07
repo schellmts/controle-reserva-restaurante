@@ -155,9 +155,47 @@
 
 .header-reserva {
     color: #ff7f11;
+    height: 90vh;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(../img/post_thumbnail-5119340b39b314917440ed22562078eb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .header-reserva h1 {
     font-size: 57px;
     text-align: start;
+}
+
+.header-reserva a {
+    color: #ff7f11;
+    transition: .3s ease;
+}
+
+.header-reserva a:hover {
+    color: #934c008a;
+}
+
+.formulario-reserva h1 {
+    color: var(--cor-prinipal);
+}
+
+.formulario-reserva label {
+    color: #ff7f11;
+}
+
+.btn-modal {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline; 
+    color: #934b00;
+    padding: 0;
+}
+
+.btn-modal:hover {
+    background-color: transparent;
+}
+
+.modal-content {
+    color: #ff7f11 !important;
 }

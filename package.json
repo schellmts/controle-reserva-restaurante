@@ -1,7 +1,7 @@
 {
   "name": "controle-reserva-restaurante",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este projeto tem como objetivo simular um sistema de reservas de um restaurante, onde o cliente insere quando quer fazer a reserva, e o sistema dirá se haverá mesas disponíveis no horario.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1",
+    "nodejs": "^0.0.0",
     "xyz": "^4.0.0"
   },
   "devDependencies": {

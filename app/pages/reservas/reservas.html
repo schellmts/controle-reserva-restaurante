@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
-            href="../../../assets/css/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../../assets/css/style.css">
+            href="../../../assets/css/bootstrap/dist/css/bootstrap.min.css">   
+            <link rel="stylesheet" href="../../../assets/css/style.css">
         <title>Document</title>
     </head>
     <body>
@@ -23,10 +23,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav cor ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="../../../index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#sobre">Sobre nós</a>
+                                <a class="nav-link" href="../../../index.html#sobre">Sobre nós</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Reservas</a>
@@ -35,11 +35,7 @@
                                 <a class="nav-link" href="#">Restaurantes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contato">Contato</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i
-                                        class="fa-solid fa-user"></i>Perfil</a>
+                                <a class="nav-link" href="../../../index.html#contato">Contato</a>
                             </li>
                         </ul>
                     </div>
@@ -47,56 +43,133 @@
             </nav>
         </div>
 
-        <section class="header-reserva w-100 vh-100 d-flex flex-column justify-content-center align-items-center bg-dark text-center">
+        <section class="header-reserva w-100 d-flex flex-column justify-content-center align-items-center bg-dark text-center">
             <div class="container">
                 <div class="row">
-                    <h1 class="fw-bold col-6">Faça sua reserva de forma simplificada na melhor plataforma!</h1>
-                    <div class="reserva-input col-6">
-                        <form class="row g-3">
-                            <div class="col-md-6">
-                              <label for="inputEmail4" class="form-label">Nome:</label>
-                              <input type="text" class="form-control" placeholder="Insira seu nome" aria-label="First name">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="inputEmail4" class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="Insira seu email" id="inputEmail4">
-                            </div>
-                            <div class="col-12">
-                              <label for="inputAddress" class="form-label">Address</label>
-                              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                            </div>
-                            <div class="col-12">
-                                <label for="inputEmail4" class="form-label">Restaurante:</label>
-                                <input type="text" class="form-control" placeholder="Insira seu nome" aria-label="First name">
-                            </div>
-                            <div class="col-md-6">
-                              <label for="inputCity" class="form-label">City</label>
-                              <input type="text" class="form-control" id="inputCity">
-                            </div>
-                            <div class="col-md-6">
-                              <label for="inputState" class="form-label">State</label>
-                              <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                              </select>
-                            </div>
-                            <div class="col-12">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                  Check me out
-                                </label>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                              <button type="submit" class="btn btn-primary">Sign in</button>
-                            </div>
-                          </form>
-                    </div>
+                    <h1 class="fw-bold col-sm-12">Faça suas reservas de forma simplificada na <span>Schell</span>F</h1>
+                    <h2 class="fs-1 text-start">Clique <a href="#reservas-form">aqui</a> para ser redirecionado para nosso formulário de reservas.</h2>
                 </div>
-                    
+            </div>   
+        </section>
+        <section class="formulario-reserva p-4 w-100 bg-dark" id="reservas-form">
+            <div class="container">
+                <h1 class="fw-bold  text-center">Formulário de reservas.</h1>
+                <form class="row g-3 p-5">
+                    <div class="col-md-6">
+                        <label for="formGroupExampleInput" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira seu nome:">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira seu sobrenome:">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="formGroupExampleInput2" class="form-label">Telefone:</label>
+                        <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">City</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Restaurante:</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Escolha...</option>
+                        <option>Restaurante 1</option>
+                        <option>Restaurante 2</option>
+                        <option>Restaurante 3</option>
+                        <option>Restaurante 4</option>
+                        <option>Restaurante 5</option>
+                        <option>Restaurante 6</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="inputZip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Concordo com os termos de uso. 
+                        </label>
+                        <!-- Button trigger modal -->
+                        
+                        <a href="" class="btn btn-modal btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Ler termos
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content bg-dark">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Termos de Uso</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-dialog modal-dialog-scrollable ps-3 pe-3">
+                                    <b>Termos de Uso do Schellf - Reservas de Restaurantes</b> <br>
+                                    <br>
+                                    <b>Estes termos de uso ("Termos") regem o uso do website Schellf ("Site") e quaisquer serviços oferecidos por meio deste site. Ao acessar ou usar o Site, você concorda com estes Termos.</b>
+                                    <br>
+                                    <br>
+                                    <b>1. Uso do Site:</b>
+
+                                    O Schellf oferece uma plataforma para reserva de restaurantes. O uso do Site está sujeito à conformidade com estes Termos e quaisquer políticas adicionais aplicáveis.
+                                    Você concorda em utilizar o Site somente para fins legítimos e de acordo com todas as leis e regulamentos aplicáveis.
+                                    <br>
+                                    <b>2. Reservas:</b>
+
+                                    O Schellf atua como um intermediário entre os usuários e os restaurantes listados no Site. Não nos responsabilizamos por erros nos serviços oferecidos pelos restaurantes.
+                                    As reservas estão sujeitas à disponibilidade dos restaurantes e às políticas individuais de reserva de cada estabelecimento.
+                                    <br>
+                                    <b>3. Conta do Usuário:</b>
+
+                                    Ao criar uma conta no Schellf, você concorda em fornecer informações precisas e atualizadas.
+                                    Você é responsável por manter a confidencialidade de sua conta e senha, e por todas as atividades que ocorrerem sob sua conta.
+                                    <br>
+                                    <b>4. Propriedade Intelectual:</b>
+
+                                    Todos os direitos autorais, marcas registradas, e outros direitos de propriedade intelectual relacionados ao Site são de propriedade do Schellf ou de seus licenciantes.
+                                    <br>
+                                    <b>5. Limitação de Responsabilidade:</b>
+
+                                    O Schellf não se responsabiliza por qualquer dano direto, indireto, incidental, especial, consequencial ou punitivo, incluindo, mas não se limitando a, lucros cessantes, perda de dados, uso ou outras perdas intangíveis, resultantes do uso ou incapacidade de usar o Site.
+                                    <br>
+                                    <b>6. Alterações nos Termos:</b>
+
+                                    O Schellf se reserva o direito de alterar estes Termos a qualquer momento. O uso contínuo do Site após alterações constitui aceitação dessas alterações.
+                                    <br>
+                                    <b>7. Disposições Gerais:</b>
+
+                                    Estes Termos constituem o acordo completo entre o usuário e o Schellf.
+                                    Se alguma disposição destes Termos for considerada inválida ou inexequível, tal disposição será limitada ou eliminada na extensão mínima necessária, e as disposições restantes destes Termos permanecerão em pleno vigor e efeito.
+                                    <br>
+                                    <br>
+                                    Ao usar o Schellf, você concorda com estes Termos. Se tiver alguma dúvida sobre estes Termos ou sobre o funcionamento do Site, entre em contato conosco.
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        
+
+                        
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                  </form>
             </div>
         </section>
+        
 
 
 
@@ -105,7 +178,8 @@
 
 
         <script src="../../../assets/css/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../../../assets/js/jquery/dist/jquery.min.js"></script>
+        <script src="../../../assets/js/jquery/dist/jquery.min.js"></script> 
+        <script src="../../../resources/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
         <script src="../../../assets/js/script.js"></script>
     </body>
 </html>
