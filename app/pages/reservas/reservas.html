@@ -53,54 +53,63 @@
         <section class="formulario-reserva p-4 w-100 bg-dark" id="reservas-form">
             <div class="container">
                 <h1 class="fw-bold mt-3 text-center">Formulário de reservas.</h1>
-                <form class="row g-3 p-5">
+                <form class="row g-3 p-5" id="form-validation">
                     <div class="col-md-6">
                         <label for="formGroupExampleInput" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira seu nome:">
+                        <input type="text" class="form-control inputs required" id="formGroupExampleInput" placeholder="Insira seu nome:" oninput="nameValidate()">
+                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>
                     </div>
                     <div class="col-md-6">
-                        <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira seu sobrenome:">
+                        <label for="formGroupExampleInput" class="form-label">Email;</label>
+                        <input type="email" class="form-control inputs required" id="formGroupExampleInput2" placeholder="Insira seu email:" oninput="emailValidate()">
+                        <span class="span-required">Por favor, insira um email válido.</span>
                     </div>
                     <div class="col-md-6">
-                        <label for="formGroupExampleInput2" class="form-label">Telefone:</label>
-                        <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                        <label for="formGroupExampleInput" class="form-label">Telefone:</label>
+                        <input type="text" class="form-control inputs required" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>
                     </div>
                     <div class="col-md-6">
-                      <label for="inputCity" class="form-label">City</label>
-                      <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="col-12">
-                      <label for="inputAddress" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="col-md-4">
-                      <label for="inputState" class="form-label">Restaurante:</label>
-                      <select id="inputState" class="form-select">
-                        <option selected>Escolha...</option>
-                        <option>Restaurante 1</option>
-                        <option>Restaurante 2</option>
-                        <option>Restaurante 3</option>
-                        <option>Restaurante 4</option>
-                        <option>Restaurante 5</option>
-                        <option>Restaurante 6</option>
-                      </select>
+                        <label for="formGroupExampleInput" class="form-label">CPF:</label>
+                        <input type="text" class="form-control inputs required" id="formGroupExampleInput" placeholder="Insira seu CPF:">
+                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>
                     </div>
                     <div class="col-md-2">
-                      <label for="inputZip" class="form-label">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
+                        <label for="formGroupExampleInput" class="form-label">CEP:</label>
+                        <input type="text" class="form-control inputs required" id="cep" placeholder="Insira seu CEP">
+                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>
+                    </div>    
+                    <div class="col-md-4">
+                        <label for="formGroupExampleInput" class="form-label">Cidade:</label>
+                        <input type="text" class="form-control inputs required" id="cidade" placeholder="Cidade:">
+                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputState" class="form-label">Restaurante:</label>
+                        <select id="inputState" class="form-select inputs required">
+                            <option selected>Escolha...</option>
+                            <option>Restaurante 1</option>
+                            <option>Restaurante 2</option>
+                            <option>Restaurante 3</option>
+                            <option>Restaurante 4</option>
+                            <option>Restaurante 5</option>
+                            <option>Restaurante 6</option>
+                        </select>
+                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>    
                     </div>
                     <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                          Concordo com os termos de uso. 
-                        </label>
-                        <!-- Button trigger modal -->
+                        <div class="form-check">
+                            <input class="form-check-input inputs required" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Concordo com os termos de uso. 
+                            </label>
+                            
+                            <!-- Button trigger modal -->
                         
                         <a href="" class="btn btn-modal btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Ler termos
                         </a>
+
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -156,11 +165,8 @@
                             </div>
                             </div>
                         </div>
-                        
-                        
-
-                        
                       </div>
+                      <span class="span-required">Por favor, insira pelo menos 3 letras</span>
                     </div>
                     <div class="col-12">
                       <button type="submit" class="btn btn-primary">Sign in</button>

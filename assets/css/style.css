@@ -3,6 +3,7 @@
 :root {
     --cor-prinipal: #ff7f11;
     --cor-secundaria: #934b00; 
+    --cor-cards: #00000063;
 }
 
 * {
@@ -11,6 +12,10 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .navbar_logo {
@@ -156,7 +161,7 @@
 .header-reserva {
     color: #ff7f11;
     height: 90vh;
-    background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(../img/post_thumbnail-5119340b39b314917440ed22562078eb.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.884)), url(../img/post_thumbnail-5119340b39b314917440ed22562078eb.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -184,6 +189,11 @@
     color: #ff7f11;
 }
 
+.formulario-reserva .span-required {
+    color: #e63636;
+    display: none;
+}
+
 .btn-modal {
     background-color: transparent;
     border: none;
@@ -200,6 +210,31 @@
     color: #ff7f11 !important;
 }
 
-.rest-grid h1 {
+.rest-grid h1, h2 {
     color: #ff7f11;
 }
+
+.card {
+    background: var(--cor-cards);
+    border: 1px solid var(--cor-prinipal);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.card img {
+    height: 250px;
+    border-bottom: 1px solid var(--cor-prinipal);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card h5 {
+    color: var(--cor-prinipal);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--cor-prinipal);
+    font-weight: 500;
+}
+
