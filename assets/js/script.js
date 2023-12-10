@@ -32,12 +32,51 @@ function emailValidate() {
   }
 }
 
+function telValidate() {
+  if(campos[2].value.length < 10) {
+    setError(2);
+  }
+  else {
+    removeError(2);
+  }
+}
 
+function cpfValidate(){
+  if(campos[3].value.length < 10) {
+    setError(3);
+  }
+  else {
+    removeError(3);
+  }
+}
 
+function cepValidate() {
+  if(campos[4].value.length < 8) {
+    setError(4);
+  }
+  else {
+    removeError(4);
+  }
+}
 
-
-
+function cityValidate() {
+  if(campos[5].value.length < 3) {
+    setError(5);
+  }
+  else {
+    removeError(5);
+  }
+}
 
 $(document).ready(function(){
     $('#telefone').mask('(00) 00000-0000');
   });
+
+  $(document).ready(function() {
+    $('#cpfInput').mask('000.000.000-00');
+  });
+
+  $(document).ready(function() {
+    $('#cep').mask('00000-000');
+  });
+  
