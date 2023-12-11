@@ -238,3 +238,37 @@
     font-weight: 500;
 }
 
+.inputcep p {
+    color: #ff7f11;
+}
+
+.cidade {
+    color: #ff7f11;
+    margin-top: 7px;
+}
+
+.options-box {
+    position: absolute;
+    width: 200px; 
+    padding: 7px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-weight: 500;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: none;
+}
+
+.option-item {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+.option-item:hover {
+    background-color: var(--cor-prinipal); /* Cor de fundo ao passar o mouse */
+}
+
+
+
+
+  

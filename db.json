@@ -1,0 +1,10 @@
+{
+    "restaurantes": [
+        {"id": 1, "nome": "Alexandria Burguer"}, 
+        {"id": 2, "nome": "Alfazema Bistro"},
+        {"id": 3, "nome": "Boulevard"}, 
+        {"id": 4, "nome": "Brescovit"}, 
+        {"id": 5, "nome": "Carnívora"},
+        {"id": 6, "nome": "Dom Nuñez"}
+    ]
+}

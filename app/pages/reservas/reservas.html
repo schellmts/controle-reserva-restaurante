@@ -74,43 +74,35 @@
                         <input type="text" class="form-control inputs required" id="cpfInput" placeholder="Insira seu CPF:" oninput="cpfValidate()">
                         <span class="span-required">Por favor, insira um CPF válido</span>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-12 col-md-4">
                         <label for="formGroupExampleInput" class="form-label">CEP:</label>
-                        <input type="text" class="form-control inputs required" id="cep" placeholder="Insira seu CEP" oninput="cepValidate()">
+                        <input type="text" class="form-control inputs required" id="cep" placeholder="CEP" oninput="cepValidate()">
+                        <button class="btn mt-2" id="btn-busca" onclick="consultaEndereco()">Buscar CEP</button>
                         <span class="span-required">Por favor, insira um CEP válido</span>
                     </div>    
-                    <div class="col-md-4">
-                        <label for="formGroupExampleInput" class="form-label">Cidade:</label>
-                        <input type="text" class="form-control inputs required" id="cidade" placeholder="Cidade:" oninput="cityValidate()">
-                        <span class="span-required">Por favor, insira pelo menos 3 letras</span>
-                    </div>
                     <div class="col-md-6">
-                        <label for="inputState" class="form-label">Restaurante:</label>
-                        <select id="inputState" class="form-select inputs required">
-                            <option selected>Escolha...</option>
-                            <option>Restaurante 1</option>
-                            <option>Restaurante 2</option>
-                            <option>Restaurante 3</option>
-                            <option>Restaurante 4</option>
-                            <option>Restaurante 5</option>
-                            <option>Restaurante 6</option>
-                        </select>
+                        <label for="formGroupExampleInput" class="form-label">Restaurante:</label>
+                        <input type="text" class="form-control inputs required" id="search-rest" placeholder="Restaurante:" autocomplete="off">
+                        <div class="options-box" id="optionsBox"></div>
                         <span class="span-required">Por favor, insira pelo menos 3 letras</span>    
+                    </div>
+                    <div class="col-md-12 inputcep">
+                        <label for="formGroupExampleInput" class="form-label">Cidade:</label>
+                        <div id="resultado"></div>  
+                    </div>
+                    <div class="col-md-12 inputcep">
+                        <label for="formGroupExampleInput" class="form-label">Estado:</label>
+                        <div id="estado"></div>  
                     </div>
                     <div class="col-12">
                         <div class="form-check">
                             <input class="form-check-input inputs required" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                                 Concordo com os termos de uso. 
-                            </label>
-                            
-                            <!-- Button trigger modal -->
-                        
+                            </label> 
                         <a href="" class="btn btn-modal btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Ler termos
                         </a>
-
-                        <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content bg-dark">
