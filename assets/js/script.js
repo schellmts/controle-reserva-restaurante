@@ -1,3 +1,4 @@
+//Validação dos campos do formulário
 const form = document.getElementById('form-validation');
 const campos = document.querySelectorAll('.required');
 const spans = document.querySelectorAll('.span-required');
@@ -59,6 +60,7 @@ function cepValidate() {
   }
 }
 
+//função para o viacep e a para não recarregar a página na hora da busca
 var botao = document.getElementById('btn-busca');
     botao.addEventListener('click', function(event) {
       event.preventDefault();
@@ -92,6 +94,7 @@ function mostrarEndereco(dados) {
   }
 }
 
+//uso da api fake com json server
 const searchInput = document.querySelector('#search-rest');
 const resultSearch = document.querySelector('#optionsBox');
 
@@ -121,6 +124,7 @@ searchInput.addEventListener('input', async () => {
   }
 });
 
+//script para um dropdown de pesquisa
 document.addEventListener('click', function(event) {
   if (!optionsBox.contains(event.target) && event.target !== searchInput) {
     optionsBox.style.display = 'none';
@@ -134,15 +138,8 @@ optionsBox.addEventListener('click', function(event) {
   }
 })
 
-function cityValidate() {
-  if(campos[5].value.length < 3) {
-    setError(5);
-  }
-  else {
-    removeError(5);
-  }
-}
 
+//jquety mask para os formulários
 $(document).ready(function(){
     $('#telefone').mask('(00) 00000-0000');
   });
@@ -154,6 +151,3 @@ $(document).ready(function(){
   $(document).ready(function() {
     $('#cep').mask('00000-000');
   });
-
-  
-  
