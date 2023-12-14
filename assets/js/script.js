@@ -1,70 +1,20 @@
-//Validação dos campos do formulário
-const form = document.getElementById('form-validation');
-const campos = document.querySelectorAll('.required');
-const spans = document.querySelectorAll('.span-required');
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function setError(index){
-  campos[index].style.border = '1px solid #e63636';
-  spans[index].style.display = 'block'
-}
-
-function removeError(index) {
-  campos[index].style.border = '';
-  spans[index].style.display = 'none'
-}
-
-
-function nameValidate(){
-  if (campos[0].value.length < 3) {
-    setError(0);
+//scripts de validação do formulário
+document.getElementById('form-validation').addEventListener('submit', function(event) {
+  if (!this.checkValidity()) {
+      event.preventDefault();
+      alert('Preencha todos os dados!')
   }
   else {
-    removeError(0);
+    alert('Formulário enviado!')
   }
-}
+});
 
-function emailValidate() {
-  if(!emailRegex.test(campos[1].value)) {
-    setError(1);
-  }
-  else {
-    removeError(1);
-  }
-}
-
-function telValidate() {
-  if(campos[2].value.length < 10) {
-    setError(2);
-  }
-  else {
-    removeError(2);
-  }
-}
-
-function cpfValidate(){
-  if(campos[3].value.length < 10) {
-    setError(3);
-  }
-  else {
-    removeError(3);
-  }
-}
-
-function cepValidate() {
-  if(campos[4].value.length < 8) {
-    setError(4);
-  }
-  else {
-    removeError(4);
-  }
-}
 
 //função para o viacep e a para não recarregar a página na hora da busca
-var botao = document.getElementById('btn-busca');
-    botao.addEventListener('click', function(event) {
-      event.preventDefault();
-    });
+ var botao = document.getElementById('btn-busca');
+      botao.addEventListener('click', function(event) {
+        event.preventDefault();
+      });
 
 function consultaEndereco() {
   let cep = document.querySelector('#cep').value;
@@ -137,6 +87,37 @@ optionsBox.addEventListener('click', function(event) {
     optionsBox.style.display = 'none'
   }
 })
+
+//script para armazenar no localstorage os dados do formulário
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('form-validation');
+
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const nome = document.getElementById('formGroupExampleInput').value;
+      const email = document.getElementById('formGroupExampleInput2').value;
+      const telefone = document.getElementById('telefone').value;
+      const cpf = document.getElementById('cpfInput').value;
+      const cep = document.getElementById('cep').value;
+      const restaurante = document.getElementById('search-rest').value;
+      const cidade = document.getElementById('resultado').textContent;
+      const estado = document.getElementById('estado').textContent;
+
+      const formData = {
+          nome: nome,
+          email: email,
+          telefone: telefone,
+          cpf: cpf,
+          cep: cep,
+          restaurante: restaurante,
+          cidade: cidade,
+          estado: estado
+      };
+
+      localStorage.setItem('formData', JSON.stringify(formData));
+  });
+});
 
 
 //jquety mask para os formulários

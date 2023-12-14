@@ -3,45 +3,47 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-            href="../../../assets/css/bootstrap/dist/css/bootstrap.min.css">   
-            <link rel="stylesheet" href="../../../assets/css/style.css">
-        <title>Reervas | SchellF</title>
+        <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="../../../assets/css/style.css">
+        <link rel="stylesheet" href="reservas.css">
+        <title>Reservas | SchellF</title>
     </head>
     <body>
-        <div class="navbar-site">
-            <nav class="navbar navbar-expand-lg bg-dark border-body fixed-top"
-                data-bs-theme="dark">
-                <div class="container">
-                    <a class="navbar_logo" href="#">Schell<span>F</span></a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav cor ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../../index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../../index.html#sobre">Sobre nós</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Reservas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../restaurantes/restaurantes.html">Restaurantes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../../index.html#contato">Contato</a>
-                            </li>
-                        </ul>
+        <header>
+            <div class="navbar-site">
+                <nav class="navbar navbar-expand-lg bg-dark border-body fixed-top"
+                    data-bs-theme="dark">
+                    <div class="container">
+                        <a class="navbar_logo" href="#">Schell<span>F</span></a>
+                        <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav cor ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../../index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../../index.html#sobre">Sobre nós</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Reservas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../restaurantes/restaurantes.html">Restaurantes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../../index.html#contato">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
+                </nav>
+            </div>
+        </header>
 
         <section class="header-reserva w-100 d-flex flex-column justify-content-center align-items-center bg-dark text-center">
             <div class="container">
@@ -53,38 +55,38 @@
         <section class="formulario-reserva p-4 w-100 bg-dark" id="reservas-form">
             <div class="container">
                 <h1 class="fw-bold mt-3 text-center">Formulário de reservas.</h1>
-                <form class="row g-3 p-5" id="form-validation">
+                <form class="row g-3 p-5" id="form-validation" novalidate>
                     <div class="col-md-6">
                         <label for="formGroupExampleInput" class="form-label">Nome:</label>
-                        <input type="text" class="form-control inputs required" id="formGroupExampleInput" placeholder="Insira seu nome:" oninput="nameValidate()">
+                        <input type="text" class="form-control inputs" id="formGroupExampleInput" placeholder="Insira seu nome:" minlength="3" required autocomplete="off">
                         <span class="span-required">Por favor, insira pelo menos 3 letras</span>
                     </div>
                     <div class="col-md-6">
                         <label for="formGroupExampleInput" class="form-label">Email;</label>
-                        <input type="email" class="form-control inputs required" id="formGroupExampleInput2" placeholder="Insira seu email:" oninput="emailValidate()">
+                        <input type="email" class="form-control inputs" id="formGroupExampleInput2" placeholder="Insira seu email:" required autocomplete="off">
                         <span class="span-required">Por favor, insira um email válido.</span>
                     </div>
                     <div class="col-md-6">
                         <label for="formGroupExampleInput" class="form-label">Telefone:</label>
-                        <input type="text" class="form-control inputs required" id="telefone" placeholder="(xx) xxxxx-xxxx" oninput="telValidate()">
+                        <input type="text" class="form-control inputs" id="telefone" placeholder="(xx) xxxxx-xxxx" required pattern="^\(\d{2}\) \d{5}-\d{4}$" autocomplete="off">
                         <span class="span-required">Por favor, insira um número válido</span>
                     </div>
                     <div class="col-md-6">
                         <label for="formGroupExampleInput" class="form-label">CPF:</label>
-                        <input type="text" class="form-control inputs required" id="cpfInput" placeholder="Insira seu CPF:" oninput="cpfValidate()">
+                        <input type="text" class="form-control inputs" id="cpfInput" placeholder="Insira seu CPF:" required pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$" minlength="11" autocomplete="off">
                         <span class="span-required">Por favor, insira um CPF válido</span>
                     </div>
                     <div class="col-12 col-md-4">
                         <label for="formGroupExampleInput" class="form-label">CEP:</label>
-                        <input type="text" class="form-control inputs required" id="cep" placeholder="CEP" oninput="cepValidate()">
-                        <button class="btn mt-2" id="btn-busca" onclick="consultaEndereco()">Buscar CEP</button>
+                        <input type="text" class="form-control inputs" id="cep" placeholder="CEP" required pattern="\d{5}-\d{3}" autocomplete="off">
                         <span class="span-required">Por favor, insira um CEP válido</span>
+                        <button class="btn mt-2" id="btn-busca" onclick="consultaEndereco()">Buscar CEP</button>
                     </div>    
                     <div class="col-md-6">
                         <label for="formGroupExampleInput" class="form-label">Restaurante:</label>
-                        <input type="text" class="form-control inputs required" id="search-rest" placeholder="Restaurante:" autocomplete="off">
-                        <div class="options-box" id="optionsBox"></div>
+                        <input type="text" class="form-control inputs" id="search-rest" placeholder="Restaurante:" required autocomplete="off">
                         <span class="span-required">Por favor, insira pelo menos 3 letras</span>    
+                        <div class="options-box" id="optionsBox"></div>
                     </div>
                     <div class="col-md-12 inputcep">
                         <label for="formGroupExampleInput" class="form-label">Cidade:</label>
@@ -96,7 +98,7 @@
                     </div>
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input inputs required" type="checkbox" id="gridCheck">
+                            <input class="form-check-input inputs" type="checkbox" id="gridCheck" required>
                             <label class="form-check-label" for="gridCheck">
                                 Concordo com os termos de uso. 
                             </label> 
@@ -161,21 +163,15 @@
                       <span class="span-required">Por favor, insira pelo menos 3 letras</span>
                     </div>
                     <div class="col-12">
-                      <button type="submit" class="btn btn-primary">Sign in</button>
+                      <button type="submit" class="btn btn-primary" id="btn-envio">Sign in</button>
                     </div>
                   </form>
             </div>
         </section>
         
 
-
-
-
-
-
-
-        <script src="../../../assets/css/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="../../../assets/js/jquery/dist/jquery.min.js"></script> 
+        <script src="../../../assets/js/jquery.min.js"></script> 
+        <script src="../../../assets/js/bootstrap.min.js"></script>
         <script src="../../../resources/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
         <script src="../../../assets/js/script.js"></script>
     </body>

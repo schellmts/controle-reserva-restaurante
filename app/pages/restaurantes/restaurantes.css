@@ -1,0 +1,55 @@
+.header-reserva {
+    color: #ff7f11;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.884)), url(../../../assets/img/post_thumbnail-5119340b39b314917440ed22562078eb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-reserva h1 {
+    font-size: clamp(1.75em, 1.5em + 3vw, 3.5em);
+    text-align: start;
+}
+
+.header-reserva a {
+    color: #ff7f11;
+    transition: .3s ease;
+}
+
+.header-reserva a:hover {
+    color: #934c008a;
+}
+
+.rest-grid h1, h2 {
+    color: #ff7f11;
+}
+
+.card {
+    background: var(--cor-cards);
+    border: 1px solid var(--cor-prinipal);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.card img {
+    height: 250px;
+    border-bottom: 1px solid var(--cor-prinipal);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card h5 {
+    color: var(--cor-prinipal);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--cor-prinipal);
+    font-weight: 500;
+}
+
+.card-icons i{
+    color: var(--cor-secundaria);
+    padding-bottom: 10px;
+}
