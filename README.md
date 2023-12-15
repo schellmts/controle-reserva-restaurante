@@ -8,6 +8,10 @@ O frontend da aplicação foi desenvolvido com HTML, CSS, JS
 
 https://schellmts.github.io/controle-reserva-restaurante/
 
+## Link para a apresentação - YouTube
+
+https://youtu.be/vXogV9YJsYI
+
 ## Protótipo
 
 https://www.figma.com/file/YNNd5fsIE1L14WvpHtmafy/Untitled?type=design&node-id=83-473&mode=design&t=FBPdgFYAI5r9twbA-0
